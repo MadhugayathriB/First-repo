@@ -161,3 +161,80 @@ else:
 
 #8 eigth prblm: even and odd seperations
 
+n=10
+even=[]
+odd=[]
+for i in range(n):
+    if i==0 or i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+print(even,end=" ")
+print(odd,end=" ")
+
+
+n=20
+even=[]
+odd=[]
+for i in range(1,n):
+    if i%2==0:
+        continue
+    odd.append(i)
+print(odd)
+
+n=15
+even=""
+odd=""
+for i in range(n):
+    if i==0 or i%2==0:
+        even+=str(i)+" "
+    else:
+        odd+=str(i)+" "
+
+print(even)
+print(odd)
+
+
+#9 ninth prblm: print patterns
+
+n=5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()
+
+
+a=5
+b=7
+for i in range(a):
+    print("* "*b)
+
+
+n=5
+for i in range(1,n+1):
+    hollow="  "*(n-i)
+    star="* "*i
+    print(hollow+star)
+
+
+n=5
+for i in range(1,n+1):
+    if i==1 or i==2 or i==n:
+        hollow="  "*(n-i)
+        star="* "*i
+        print(hollow+star)
+    else:
+        hollow="  "*(n-i)
+        gap="  "*(i-2)
+        print(hollow+"* "+gap+"* ")
+    print()
+
+
+a=4
+b=7
+for i in range(1,a+1):
+    if i==1 or i==a:
+        print("* "*b)
+    else:
+        print("* "+"  "*(b-2)+"* ")
+

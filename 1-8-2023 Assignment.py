@@ -52,3 +52,4 @@ print(st.index("p"))# returns error if not there
 #counting
 st=input("Enter string : ")
 print(st.count("n"))
+

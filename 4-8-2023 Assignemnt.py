@@ -75,6 +75,20 @@ result=li+list(set)
 print(result)
 
 
+#9 count occurance of characters in string
+st=input(" Enter string : ")
+li=[]
+
+for i in st:
+    li=li+[i]
+set_1=set(li)
+
+for i in set_1:
+    print(i+" : "+ st.count(i))
+
+    
+
+
 
 #10 find anagrams or not - having same alphabets
 st1=input("Enter string : ")
@@ -114,15 +128,5 @@ result=alpha+num
 final="".join(result)
 print(final)
 
-#9 count occurance of characters in string
-st=input(" Enter string : ")
-li=[]
-
-for i in st:
-    li=li+[i]
-set_1=set(li)
-
-for i in set_1:
-    print(i+" : "+ st.count(i))
 
     

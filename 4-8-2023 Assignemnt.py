@@ -1,10 +1,14 @@
+
+
 #1 remove character from a string
+
 st=input("Enter string : ")
 ch=input(" Enter character : ")
 method=st.replace(ch,"")
 print(method)
 
-#2 check if string is palinmdrome or not
+
+#2 check if string is palindrome or not
 st1=input("Enter st : ")
 st2=st1[::-1]
 if st1==st2:
@@ -28,7 +32,7 @@ cha=" "
 result=st.replace(cha,"-")
 print(result)
 
-#5 count alpahabets digis and spl characters
+#5 count alpahabets digits and spl characters
 st=input("Enter password: ")
 alpha=0
 digits="0,1,2,3,4,5,6,7,9,8"
@@ -46,7 +50,7 @@ print("alpha : " +str(alpha))
 print("digit : "+str(digit ))
 print("spl : "+ str(spl))
 
-#6 remove all balnk spcaes in string 
+#6 remove all blank spcaes in string 
 st=input("Enter string : ")
 result=st.replace(" ","")
 print(result)
@@ -62,35 +66,47 @@ for i in st:
 print(sum(li))
 
 #8remove repeated character from string
+
 st=input("Enter strimg : ")
-li=[]
-set=set()
+s=""
 for i in st:
-    if st.count(i)==1:
-        li=li+[i]
+    if i in s:
+       pass
     else:
-        set.add(i)# removes repaeted alphabets
+       s=s+i
+print(s)
 
-result=li+list(set)
-print(result)
 
+#st=input("Enter strimg : ")
+#li=[]
+#set=set()
+#for i in st:
+#    if st.count(i)==1:
+#       li=li+[i]
+#   else:
+#        set.add(i)# removes repaeted alphabets
+
+#result=li+list(set)
+#print("".join(result))
 
 #9 count occurance of characters in string
-st=input(" Enter string : ")
-li=[]
 
+st=input("Enter strimg : ")
+s=""
 for i in st:
-    li=li+[i]
-set_1=set(li)
+    if i in s:
+       pass
+    else:
+      s=s+i
+for i in s:
+   print(i , " : ",st.count(i))
 
-for i in set_1:
-    print(i+" : "+ st.count(i))
 
     
 
 
 
-#10 find anagrams or not - having same alphabets
+#10 find anagrams : if  or not - having same alphabets
 st1=input("Enter string : ")
 st2=input("Enter string : ")
 li=[]
@@ -114,7 +130,7 @@ if count==len(st1):
 else:
     print("Its not an anagram")
 
-#11 sort alhbaets and nect digits in string
+#11 sort alphbets and next digits in string
 st=input("Enter string : ")
 alpha=[]
 num=[]
@@ -123,7 +139,7 @@ for i in st:
         num=num+[i]
     else:
         alpha=alpha+[i]
-result=alpha+num
+result=sorted(alpha)+sorted(num)
 
 final="".join(result)
 print(final)

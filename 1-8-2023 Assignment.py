@@ -1,3 +1,4 @@
+
 #string slicing
 st=input("enter string : ")
 print(st[:9])

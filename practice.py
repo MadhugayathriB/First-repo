@@ -1,5 +1,3 @@
-
-l=input("enter list : ")
-li=l.split(",")
-print(dict(li))
-
+s=input("entr : ")
+s=s.split()
+print(s)

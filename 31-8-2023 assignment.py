@@ -34,13 +34,15 @@ distinct(s)
 
 #3check is string is a pangram or not 
 def pangram(s):
+    old=""
     new=""
+    
+    s=s.lower()
     for i in s:
-        if i==" ":
-            pass
-        elif i in new:
-            pass
-        else:
+        if i.isalpha():
+            old=old+i
+    for i in old:
+        if i not in new:
             new=new+i
     if len(new)==26:
         print("Its a pangram")

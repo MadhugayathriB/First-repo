@@ -40,9 +40,27 @@
 # se=tuple(s)
 # sumof(1,2,3,4,5)
 s="nu76fbhyt @#%6%5fvb"
-spl=""
-for i in s:
-    if  i.isalpha():
-        spl=spl+i
-print(spl)
+# spl=""
+# for i in s:
+#     if  i.isalpha():
+#         spl=spl+i
+# print(spl)
 
+def pangram(s):
+    old=""
+    new=""
+    
+    s=s.lower()
+    for i in s:
+        if i.isalpha():
+            old=old+i
+    for i in old:
+        if i not in new:
+            new=new+i
+    if len(new)==26:
+        print("Its a pangram")
+    else:
+        print("Its not a pangram")
+
+st=input("Enter string : ")
+pangram(st)

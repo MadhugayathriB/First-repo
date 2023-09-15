@@ -1,4 +1,3 @@
-
 # str = "marolix technology"
 # dict ={}
 # for s in str:
@@ -39,7 +38,7 @@
 # s=s.split()
 # se=tuple(s)
 # sumof(1,2,3,4,5)
-s="nu76fbhyt @#%6%5fvb"
+#s="nu76fbhyt @#%6%5fvb"
 # spl=""
 # for i in s:
 #     if  i.isalpha():
@@ -89,10 +88,6 @@ s="nu76fbhyt @#%6%5fvb"
 # num=int(input("Enter num: "))    
 # stars(num)
 
-# num=6
-# for i in range(num):
-#     print("* "*(num-i))
-
 
 # def counting(q):
 #     a=[]
@@ -128,3 +123,89 @@ s="nu76fbhyt @#%6%5fvb"
 #         return base*power(base,exponent-1)
 # res=power(2,6)
 # print(res)
+
+# dict = {"country101": {"country":"india" , "capital":"delhi"} ,"country102":{"country":"pakistan","capital":"islamabad"},"country103":{"country":"china","capital":"beijing"},"country104":{"country":"usa","capital":"washington"},"country105":{"country":"france","capital":"paris"}}
+# def signup(code,countryname,capitalname):
+#      code=input("Enter countrycode: ")
+#      countryname=input("Enter country: ")
+#      capitalname=input("Enter capital: ")
+#      dict[code]={"country":countryname,"capital":capitalname}
+#      print(dict)
+# def register(code,countryname,capitalname):
+#      code=input("Enter country code : ")
+#      if code in dict.keys():
+          
+#         countryname=input("Enter country: ")
+     
+#         if countryname==dict[code]["country"]:
+#             capitalname=input("Enter capital: ")
+#             if dict[code]["capital"]==capitalname:
+#                print("You are correct")
+#             else:
+#                print("Your answer is wrong")
+
+#      else:
+#           print("Loading to signup page .....")
+#           signup(code,countryname,capitalname)
+#           print("country is Succesfully registered")
+# register(101,"pakistan","islamabad")
+
+# for i in range(2,10):   
+#    for j in range(2,i):
+        
+#       if i%j==0:
+#          break
+#    else:
+#       print(i)
+    
+from functools import *
+import math 
+from math import *
+import random
+from random import * 
+# import string
+
+# print(random())  #gives random num from 0-1
+# print(randint(5,10))   #gives random num from 5-10 
+#print(chr(randint(ord("a"),ord("z"))))# gives any random alphabet from a-z
+# print(choice("abgtrecvhh"))# prints any alphabet in given sequense string or list.
+#print(math.factorial(5))#prints factorial
+# s="marolixtechnologysolutions"
+# print(s.rfind("o",5,20))
+# d={"madhu":"python","navya":"testing","anu":"python","praveen":"python","rushita":"devops"}
+# for k,v in d.items():
+#     if v=="python":
+#         print(k)
+#         
+ # calculate the bill of order
+menu={"vegloaded":120,"farmfresh":180,"non_veg loaded":230,"spiceddoublechicken":250}
+additionals={"extra cheese":20,"extra ketchup":30}
+
+o=int(input("Numof items needed:"))
+
+
+
+bill=0
+for i in range(o):
+    a=input("enter pizza name:")
+    b=int(input("enter quantity:"))
+    if a in menu:
+        bi= menu[a]*b
+        bill+=bi
+c=input("enter a add on,type 1 else type 0:")
+
+if c=="1":
+    d=input("enter addon:")
+    if d in additionals:
+        bill=bill+additionals[d]
+        print(f'total prize:{bill}')
+    else:
+            print("add on not found")
+else:
+    print(f'total prize:{bill}')
+   
+
+
+
+
+   

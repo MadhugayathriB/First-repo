@@ -178,34 +178,54 @@ from random import *
 #         print(k)
 #         
  # calculate the bill of order
-menu={"vegloaded":120,"farmfresh":180,"non_veg loaded":230,"spiceddoublechicken":250}
-additionals={"extra cheese":20,"extra ketchup":30}
+# menu={"vegloaded":120,"farmfresh":180,"non_veg loaded":230,"spiceddoublechicken":250}
+# additionals={"extra cheese":20,"extra ketchup":30}
 
-o=int(input("Numof items needed:"))
-
-
-
-bill=0
-for i in range(o):
-    a=input("enter pizza name:")
-    b=int(input("enter quantity:"))
-    if a in menu:
-        bi= menu[a]*b
-        bill+=bi
-c=input("enter a add on,type 1 else type 0:")
-
-if c=="1":
-    d=input("enter addon:")
-    if d in additionals:
-        bill=bill+additionals[d]
-        print(f'total prize:{bill}')
-    else:
-            print("add on not found")
-else:
-    print(f'total prize:{bill}')
-   
+# o=int(input("Numof items needed:"))
 
 
 
+# bill=0
+# for i in range(o):
+#     a=input("enter pizza name:")
+#     b=int(input("enter quantity:"))
+#     if a in menu:
+#         bi= menu[a]*b
+#         bill+=bi
+# c=input("enter a add on,type 1 else type 0:")
 
-   
+# if c=="1":
+#     d=input("enter addon:")
+#     if d in additionals:
+#         bill=bill+additionals[d]
+#         print(f'total prize:{bill}')
+#     else:
+#             print("add on not found")
+# else:
+#     print(f'total prize:{bill}')
+def result():
+    domainlist=["python","java","testing","devops","dotnet"]
+    employee_list={}
+    pythonlist=[]
+    javalist=[]
+    devopslist=[]
+    dotnetlist=[]
+    testinglist=[]
+    num_of_employees=int(input("Enter num of employees: "))
+    for i in range(num_of_employees):
+        domain=input("Enter domain: ")
+        name=input("Enter name: ")
+        emp_id=input("Enter emp_id: ")
+        email=input("Enter mail: ")
+        if domain in domainlist:
+            d={"name":name,"emp_id":emp_id,"email":email}
+            dom=domain+"list"
+            print(dom)
+    #         dom.append(d)
+    #         employee_list[domain]=dom
+    # print(employee_list)#prints entire list
+    # dom=input("Enter domain: ")
+    # print(employee_list[dom])#prints only details of one domain
+    # for i in employee_list[dom]:
+    #     print(i["name"])#prints name in one domian
+result()

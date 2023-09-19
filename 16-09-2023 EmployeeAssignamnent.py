@@ -33,3 +33,20 @@ def result():
     for i in employee_list[dom]:
         print(i["name"])#prints name in one domian
 result()
+
+# def result():
+#     Employeedetails={}
+#     Number_of_employees=int(input("Enter_num_of_employees: "))
+#     for i in range(1,Number_of_employees+1):
+#         name=input("Name_of_employee: ")
+#         domain=input("Employee_domain: ")
+#         emp_id=input("Enter emp_id: ")
+#         email_id=input("Enter_mailid: ")
+#         Employeedetails[i]={"name":name,"domain":domain,"emp_id":emp_id,"email_id":emp_id}
+#     print(Employeedetails)
+#     dom=input("Enter domain: ")
+#     for k,v in Employeedetails.items():
+    
+#         if v["domain"]==dom:
+#             print(v)
+# result()

@@ -1,4 +1,4 @@
-from sumfile import *
+
 def multiply(x,y):
     print(x*y)
 

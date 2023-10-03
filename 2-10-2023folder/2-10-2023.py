@@ -1,24 +1,5 @@
 #calculator function
-def add(*var):
-    sum=0
-    for i in var:
-        sum=sum+int(i)
-    print(sum)
-def sub(*var):
-    sub=0
-    for i in var:
-        sub=int(i)-sub
-    print(sub)
-def mul(*var):
-    mul=1
-    for i in var:
-        mul=mul*int(i)
-    print(mul)
-def div(*var):
-    div=1
-    for i in var:
-        div=int(i)/div
-    print(div)
+from calculatorfunctions import *
 print("For addition: add")
 print("For substraction; sub")
 print("For multiplication: mul")
@@ -38,8 +19,8 @@ n=int(input("Enter no.of employees: "))
 emp_details={}
 for i in range(1,n+1):
     name=input("Enter name: ")
-    emp_id=input("Enter emp.id: ")
     designation=input("Enter designation: ")
+    emp_id=input("Enter emp.id: ")
     email=input("Enter email: ")
     emp_details[name]={"name":name,"email":email,"designation":designation,"emp_id":emp_id}
 des=input("Enter designation: ")

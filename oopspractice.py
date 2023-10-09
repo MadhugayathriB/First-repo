@@ -24,6 +24,7 @@ class Employee():
         self.name=name
         Employee.id=897
         self.company="wipro"
+        print(Employee.company)
         print(self.id)#can print using self or classnme
         
     def m1(self):
@@ -38,6 +39,7 @@ class Employee():
     def m2(cls):
         Employee.gender="female"
         cls.salary=25000
+        Employee.company="tcs"
         print(Employee.company)#To print needed to write cls or clssanme
         print(cls.salary)
         print(cls.id)
@@ -52,19 +54,19 @@ e1=Employee("madhu")
 print(e1.__dict__)#gives only name b ecUSE only name in init method
 print(Employee.__dict__)
 e1.m2()
-e1.m1()
-Employee.id=1754# can modify id outside also using classname
-print(e1.id)
-del Employee.salary # deltes salary in the class 
-print(e1.__dict__)#gives both name n age because both are decalred using self.
-e1.m3()
-Employee.city="hyderabad"  #Can decalre var using classname only for static var 
-print(e1.city)
-e2=Employee("anu")
-print(e2.city)
-print(e2.id)
-print(e2.company)
-print(e2.__dict__)
+# e1.m1()
+# Employee.id=1754# can modify id outside also using classname
+# print(e1.id)
+# del Employee.salary # deltes salary in the class 
+# print(e1.__dict__)#gives both name n age because both are decalred using self.
+# e1.m3()
+# Employee.city="hyderabad"  #Can decalre var using classname only for static var 
+# print(e1.city)
+# e2=Employee("anu")
+# print(e2.city)
+# print(e2.id)
+# print(e2.company)
+
 
 
 

@@ -24,7 +24,9 @@ class atm():
         atm.functions()
     @staticmethod
     def deposit():
-         atm.amount=int(input("Enter amount to be deposited: "))
+         a=int(input("Enter amount to be deposited: "))
+         atm.amount=a+atm.amount
+
 
          print("your acc has ", atm.amount)
          atm.functions() 

@@ -1,8 +1,6 @@
 class atm():
-    def __init__(self,name):
-        self.name=name
-        atm.amount=0
-        atm.pin=0
+    amount=0
+    pin=0
     @staticmethod
     def functions():
         Req=(input("Enter req: "))
@@ -16,7 +14,7 @@ class atm():
         elif Req=="4":
             atm.balanceenquiry()
         elif Req=="0"  :
-            print("Thankyou")
+            print("Thankyou visit again")
      
     @staticmethod
     def pingeneration():
@@ -49,7 +47,7 @@ class atm():
             else:
                 print("Enter correct pin")
         else:
-            print("Please set a pin for yout atm.")
+            print("Please set a pin for your atm.")
         atm.functions()
     @staticmethod
     def balanceenquiry():
@@ -60,7 +58,7 @@ print("Enter 1 for pingeneration")
 print("Enter 2 for deposit")
 print("Enter 3 for withdrwal")
 print("Enter 4 for balance enquiry")
-c=atm("madhu")
+c=atm()
 c.functions()
 
 

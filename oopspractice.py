@@ -23,17 +23,19 @@ class Employee():
     def __init__(self,name):
         self.name=name
         Employee.id=897
-        self.company="wipro"
         print(Employee.company)
+        self.age=15
+        print(self.age)
         print(self.id)#can print using self or classnme
         
     def m1(self):
         self.age=23
         Employee.mail="madhy@gmail.com"
+        
         print(Employee.mail)#To print or declare neded to write classnme or self
         print(self.age)
         print(self.mail)
-        print(Employee.gender)
+        
 
     @classmethod
     def m2(cls):
@@ -53,13 +55,13 @@ class Employee():
 e1=Employee("madhu")
 print(e1.__dict__)#gives only name b ecUSE only name in init method
 print(Employee.__dict__)
-e1.m2()
-# e1.m1()
+# e1.m2()
+e1.m1()
 # Employee.id=1754# can modify id outside also using classname
 # print(e1.id)
 # del Employee.salary # deltes salary in the class 
 # print(e1.__dict__)#gives both name n age because both are decalred using self.
-# e1.m3()
+e1.m3()
 # Employee.city="hyderabad"  #Can decalre var using classname only for static var 
 # print(e1.city)
 # e2=Employee("anu")

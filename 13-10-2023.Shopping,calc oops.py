@@ -38,6 +38,8 @@ class shopping():
 
             r["quantity"]=r["quantity"]-quantity
             r["bill"]=r["bill"]-r["price"]*quantity
+            if r["quantity"]==0:
+                del self.cart[item]
         else:
             print(item, "is not added to cart")
         
@@ -45,7 +47,11 @@ class shopping():
     def display(self):
         self.cartvalue=0
         self.cartitems=0
-        print(self.cart)
+        if self.cart=={}:
+            print("Your cart is empty.")
+        else:
+            print(self.cart)
+        
         for k,v in self.cart.items():
             
             self.cartvalue=self.cartvalue+v["bill"]

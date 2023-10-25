@@ -52,23 +52,74 @@ class Employee():
         Employee.domain="python"
         del Employee.mail #del employee mail
         print(Employee.domain)#to print needed to write clsanme
-e1=Employee("madhu")
-print(e1.__dict__)#gives only name b ecUSE only name in init method
-print(Employee.__dict__)
-# e1.m2()
-e1.m1()
-# Employee.id=1754# can modify id outside also using classname
-# print(e1.id)
-# del Employee.salary # deltes salary in the class 
-# print(e1.__dict__)#gives both name n age because both are decalred using self.
-e1.m3()
-# Employee.city="hyderabad"  #Can decalre var using classname only for static var 
-# print(e1.city)
+# e1=Employee("madhu")
+# print(e1.__dict__)#gives only name b ecUSE only name in init method
+# print(Employee.__dict__)
+# # e1.m2()
+# e1.m1()
+# # Employee.id=1754# can modify id outside also using classname
+# # print(e1.id)
+# # del Employee.salary # deltes salary in the class 
+# # print(e1.__dict__)#gives both name n age because both are decalred using self.
+# e1.m3()
+# # Employee.city="hyderabad"  #Can decalre var using classname only for static var 
+# # print(e1.city)
 # e2=Employee("anu")
 # print(e2.city)
 # print(e2.id)
-# print(e2.company)
+# print(e2.company):
 
+
+class parent:
+    def __init__(self):
+        print("I am constrcutor")
+    def m1(self):
+        print("I am intsnce method")
+    @classmethod
+    def m2(cls):
+        print("I am class method")
+    @staticmethod
+    def m3():
+        print("I am ststic method")
+class child(parent):
+    def __init__(self):
+        print("I am child contsructor")
+    def m4(self):#calling methods n cnstructor using super in intsnce method
+        super().__init__()  
+        super().m1()
+        super().m2()
+        super().m3()
+    @classmethod
+    def m5(cls):
+        super().m2()#using cls method cls n ststic methods are called directly
+        super().m3()
+        super(child,cls).__init__(cls)#constructor n intsnce methods should be written this way, childclassname, cls should b passed into argument.
+        super(child,cls).m1(cls)
+
+    @staticmethod
+    def m6():#only ststic n cls methpds can be called from prent class using super
+        super(child,child).m2()# childclass name should be passed twice.
+        super(child,child).m3()
+# c=child()
+# c.m5()
+#operator overloading
+class marks():
+    def __init__(self,x):
+        self.x=x
+    def __add__(self,other):
+        return(self.x+other.x)
+# s1=marks(10)
+# s2=marks(20)
+# print(s1+s2)
+class marks():
+    def __init__(self,x):
+        self.x=x
+    def __sub__(self,other):
+        return(self.x-other.x)
+# s1=marks(30)
+# s3=marks(10)
+# print(s1-s3)#for sub mention sub n give "-".
+#for multiplcation give __mul__ and "*".
 
 
 

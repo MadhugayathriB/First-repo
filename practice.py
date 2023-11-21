@@ -177,3 +177,8 @@ from random import *
 #     if v=="python":
 #         print(k)
 #         
+ 
+
+# a=10
+# print(f'I am {a} years old.')
+

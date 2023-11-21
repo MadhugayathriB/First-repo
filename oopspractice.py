@@ -121,7 +121,20 @@ class marks():
 # print(s1-s3)#for sub mention sub n give "-".
 #for multiplcation give __mul__ and "*".
 
+# try:
+#     print("try")# only if both staments are correct except wont print,even if only one is printed except is also printed.
+#     print(10/0)
+# except:
+#     print("except")
 
 
-
-
+class parent:
+    def __init__(self):
+        self.a=10
+class child(parent):
+    def __init__(self):
+        print("I am child")
+    def method(self):
+        print(self.a)
+c=child()
+c.method()

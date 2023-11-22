@@ -16,6 +16,17 @@
 # print(ans)
 
 
+# v="a,e,i,o,u"
+# s=input("enter string: ")
+# for i in s:
+#     if i in v:
+#         s=s.replace(i,"")
+        
+# print(s)
+
+
+
+
 #replcae first vowel
 # v="a,e,i,o,u"
 # s=input("enter string: ")
@@ -24,6 +35,18 @@
 #         s=s[:i]+""+s[i+1:]
 #         break
 # print(s)
+
+
+# v="a,e,i,o,u"
+# s=input("enter string: ")
+# for i in s:
+#     if i in v:
+#         s=s.replace(i,"-")
+#         break
+# print(s)
+
+
+
 
 
 
@@ -161,6 +184,74 @@
 # i=int(input("Enter index: "))
 # res=s.replace(s[i],"")
 # print(res)
+
+
+#anagrams
+# s1=input("Enter string: ")
+# s2=input("Enter string: ")
+# count=0
+# if len(s1)==len(s2):
+#     for i in s1:
+#         if s1.count(i)==s2.count(i):
+#             count=count+1
+#         else:
+#             print("Not angrams")
+# else:
+#     print("Not anagrams")
+# if count==len(s1):
+#     print(s1,s2,"Both are anagrams")
+
+
+#reverse the list
+# l=[1,2,3,4,5]
+# print(l[::-1])
+
+
+
+#find pairs of which sum gives digit
+# n=int(input("Enter number: "))
+# list=[1,2,3,4,5,6,7,8,9,10]
+# res=[]
+# for i in range(len(list)):
+#     for j in range(i+1,len(list)):
+#         if list[i]+list[j]==n:
+#             t=(list[i],list[j])
+#             res.append(t)
+# print(res)
+
+
+#create base power
+# print(pow(2,8))
+# print(5**5)
+# #using recusrion
+# def res(base,power):
+#     if power<=1:
+#         return base
+#     else:
+#         return base*res(base,power-1)
+# print(res(5,5))
+
+
+#fibonacci series using recusrion
+# def fibonacci(n):
+#     if n<=1:
+#         return n
+#     else:
+#         return fibonacci(n-1)+fibonacci(n-2)
+# print(fibonacci(4))
+
+
+
+#find highest frequency in list
+# l=[1,2,3,4,2,3,5,6,3,4,3]
+# c=[]
+# for i in l:
+#     c.append(l.count(i))
+# m=max(c)
+# i=c.index(m)
+# res=l[i]
+# print(res ,"is highest fequency in ",l)
+
 
 
 

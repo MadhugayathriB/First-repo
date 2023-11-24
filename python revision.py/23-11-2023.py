@@ -139,6 +139,77 @@
 
 
 
+#changing static and instance variable values
+# class oops:
+#     company="tcs"
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#     def display(self):
+#         print("I am ",self.name," working at ",oops.company)
+
+# ob=oops("madhu",23)
+# ob.display()
+# ob.name="abhinaya"
+# ob.age=19
+# oops.company="shell"
+# ob.display()
+
+
+
+#creating static and class methods
+# class oops:
+#     @classmethod
+#     def cl(cls):
+#         cls.name="madhu"
+#         oops.age=23
+#     @staticmethod
+#     def st():
+#         oops.company="walmart"
+#     @classmethod
+#     def display(cls):
+#         print("I am ",oops.name," working at ",oops.company)
+# ob=oops()
+# ob.cl()
+# ob.st()
+# ob.display()
+# oops.company="amazon"
+# oops.name="abhinaya"
+# oops.salary=50000
+# ob.display()
+# print(oops.salary)
+# del oops.age
+
+
+#inheritance
+class par():
+    def __init__(self):
+        self.name="madhu"
+    def cal(self):
+        print("I am ",self.name)
+    @classmethod
+    def parclass(cls):
+        print("I m parent classmethod")
+class child(par):
+    def display(self):
+       print(self.name)
+    @classmethod     
+    def classme(cls):#accesing instance n constructor in class method
+          super().parclass()#class n static methods can b accesed directly
+          super(child,cls).__init__(cls)
+          super(child,cls).cal(cls)
+    @staticmethod
+    def childsta():#only cls n static methods can b accesed
+        super(child,child).parclass()
+ob=child()
+ob.display()
+ob.classme()
+ob.childsta()
+
+
+
+
+
     
 
 
